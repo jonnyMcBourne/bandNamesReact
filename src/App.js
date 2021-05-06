@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import io from 'socket.io-client'
 import { BandList } from "./components/BandList";
 import { AddBand } from "./components/AddBand";
+import {Chart} from './components/Chart'
 
 const connectSocket = () => {
 
@@ -64,6 +65,9 @@ const App = () => {
              addBand={addBand}
           />
         </div>
+        <Chart
+        datachart={bands}
+        />
       </div>
     </div>
   );
